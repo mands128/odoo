@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="professor_wizard_form_view">
+            <field name="name">professor.wizard.form.view</field>
+            <field name="model">professor.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <separator string='Professor Description'/>
+                            <field name="professor_desc"></field>
+                        </group>
+                        <footer>
+                            <button class="btn-primary" type="object" name="act_submit" string="Submit"/>
+                            <button class="btn-primary" special="cancel" string="Cancel"/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>
