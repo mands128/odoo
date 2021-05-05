@@ -1,0 +1,66 @@
+<odoo>
+    <data>
+        <record id="student_information_tree_view" model="ir.ui.view">
+            <field name="name">student_information.tree.view</field>
+            <field name="model">student.information</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="student_name"/>
+                    <field name="student_email"/>
+                    <field name="mobile_no"/>
+                    <field name="state"/>
+                    <field name="country"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="student_information_form_view" model="ir.ui.view">
+            <field name="name">student_information.form.view</field>
+            <field name="model">student.information</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button type="object" string="Reset" name="act_draft" class="btn-primary" attrs="{'invisible':[('states','in',['draft','approved'])]}"/>
+                        <button type="object" string="Approve" name="act_approve" class="btn-primary" groups="school_app.group_educational_manager"/>
+                        <button type="object" string="Cancel" name="act_cancel" class="btn-primary"/>
+                        <field name="states" widget="statusbar" statusbar_visible="draft,approved,cancel"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group string="Basic Details">
+                                <field name="student_name"/>
+                                <field name="student_email"/>
+                                <field name="mobile_no"/>
+                                <field name="state"/>
+                                <field name="country"/>
+                                <!-- <field name="passout"/> -->
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Education Qualification">
+                                <field name="education_qualification" widget="section_and_note_one2many">
+                                    <tree editable="bottom">
+                                        <control >
+                                            <create string="Add a Degree"/>
+                                        </control>
+                                        <field name="degree"/>
+                                        <field name="institute_name"/>
+                                        <field name="passout_year"/>
+                                        <field name="difference_year"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_student_information_data">
+            <field name="name">Student_information</field>
+            <field name="res_model">student.information</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="student_information_nav_menu" parent="school_id_menu" name="Registration Details" action="action_student_information_data"/>
+    </data>
+</odoo>

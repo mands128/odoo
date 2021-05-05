@@ -1,0 +1,49 @@
+
+<odoo>
+	<data>
+		<record id="education_manager_label" model="ir.module.category">
+        	<field name="name">Educational Manager</field>
+        	<field name="sequence">1</field>
+    	</record>
+
+		<record id="education_manager_user_category" model="ir.module.category">
+              <field name="name">User Type</field>
+              <field name="sequence">1</field>
+               <field name="parent_id" ref="education_manager_label"/>
+    	</record>
+
+		<record id="group_educational_manager" model="res.groups">
+        	<field name="name">Educational manager</field>
+        	<!-- <field name="comment">Show line subtotals without taxes (B2B)</field> -->
+        	<!-- <field name="category_id" ref="base.module_category_hidden"/> -->
+    	</record>
+    	<record id="professor_label" model="ir.module.category">
+        	<field name="name">Professor</field>
+        	<field name="sequence">1</field>
+    	</record>
+
+		<record id="professor_user_category" model="ir.module.category">
+              <field name="name">User Type</field>
+              <field name="sequence">1</field>
+               <field name="parent_id" ref="professor_label"/>
+    	</record>
+
+		<record id="group_professor" model="res.groups">
+        	<field name="name">Professor</field>
+        	<!-- <field name="comment">Show line subtotals without taxes (B2B)</field> -->
+        	<!-- <field name="category_id" ref="base.module_category_hidden"/> -->
+    	</record>
+
+    	<record model="ir.rule" id="rules_for_studentt">
+        	<field name="name">SManager can see all Record</field>
+        	<field name="model_id" ref="model_student_information"/>
+        	<field name="groups" eval="[(4, ref('school_app.group_educational_manager'))]"/>
+   		</record>
+
+   		<record model="ir.rule" id="rules_for_professor">
+        	<field name="name">Professor can see only his/her Record</field>
+        	<field name="model_id" ref="model_school_professor"/>
+        	<field name="groups" eval="[(4, ref('school_app.group_professor'))]"/>
+   		</record>
+	</data>
+</odoo>

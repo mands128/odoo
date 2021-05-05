@@ -1,0 +1,95 @@
+<odoo>
+    <data>
+        <record id="student_tree_view" model="ir.ui.view">
+            <field name="name">student.tree.view</field>
+            <field name="model">school_student</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="email"/>
+                    <field name="gender"/>
+                    <field name="dob"/>
+                    <field name="phone"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="student_form_view" model="ir.ui.view">
+            <field name="name">student.form.view</field>
+            <field name="model">school_student</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button type="object" string="Confirm" class="btn-primary" name="action_abc"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group string="Basic Details">
+                                <field name="name"/>
+                                <field name="email"/>
+                                <field name="dob"/>
+                                <field name="address"/>
+                                <field name="phone"/>
+                                <field name="age"/>
+                                <field name="course_id" widget="many2many_tags"/>
+                                <!--                          <field name="date"/>-->
+
+                            </group>
+                            <group string="Photo">
+                                <field name="photo" widget="image" class="oe_avatar" string="Image"/>
+                            </group>
+                            <group>
+                                <div id="fruits" class="fruits">
+                                    <span>Apple</span>
+                                    <span>Mango</span>
+                                    <span>Grapes</span>
+                                </div>
+                                <div class="vegetable">
+                                    <span>Potato</span>
+                                    <span>Onion</span>
+                                    <span>Tomato</span>
+                                </div>
+                            </group>
+                        </group>
+                        <!--                  <div class="oe_title">-->
+                        <!--                      <h1>-->
+                        <!--                          <field name="name" placeholder="Student Name"/>-->
+                        <!--                      </h1>-->
+                        <!--                  </div>-->
+                        <!-- <notebook>
+                            <page string="Course">
+                                <field name="course_id" widget="section_and_note_one2many">
+                                    <tree editable="top">
+                                        <field name="course_name"/>
+                                        <field name="desc"/>
+                                        <field name="fee"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+ -->                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_school_data">
+            <field name="name">School_app</field>
+            <field name="res_model">school_student</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="school_id_menu" name="school app"/>
+        <menuitem id="school_nav_menu" parent="school_id_menu" name="school app" action="action_school_data"/>
+    </data>
+</odoo>
+
+
+
+
+
+
+
+
+
+
+
+

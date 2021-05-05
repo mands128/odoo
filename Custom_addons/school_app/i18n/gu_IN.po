@@ -1,0 +1,524 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* school_app
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-23 06:24+0000\n"
+"PO-Revision-Date: 2021-04-23 06:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: school_app
+#: model:ir.actions.report,print_report_name:school_app.action_report_professor
+msgid "'Professor - %s' % (object.name)"
+msgstr ""
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.sale_order_report_inherit
+msgid "<i>abc</i>"
+msgstr ""
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.professor_form_view
+msgid "<span class=\"o_stat_text\">Contacts</span>"
+msgstr ""
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.professor_form_view
+msgid "<span class=\"o_stat_text\">Print</span>"
+msgstr ""
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.student_form_view
+msgid ""
+"<span>Apple</span>\n"
+"                                    <span>Mango</span>\n"
+"                                    <span>Grapes</span>"
+msgstr ""
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.students_inherit_view
+msgid "<span>Banana</span>"
+msgstr ""
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.students_inherit_view
+msgid "<span>Lady Finger</span>"
+msgstr ""
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.student_form_view
+msgid ""
+"<span>Potato</span>\n"
+"                                    <span>Onion</span>\n"
+"                                    <span>Tomato</span>"
+msgstr ""
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.report_professsor_app
+msgid "<span>Professor </span>"
+msgstr ""
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.report_professsor_app
+msgid "<strong><b>Basic Details </b></strong>"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model.fields,help:school_app.field_school_product__desc
+msgid ""
+"A description of the Product that you want to communicate to your customers."
+" This description will be copied to every Sales Order, Delivery Order and "
+"Customer Invoice/Credit Note"
+msgstr ""
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.professor_form_view
+msgid "Add a product"
+msgstr "એક ઉત્પાદન ઉમેરો"
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_student__address
+msgid "Address"
+msgstr "સરનામું"
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_professor__age
+#: model:ir.model.fields,field_description:school_app.field_school_student__age
+msgid "Age"
+msgstr "ઉંમર"
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.student_form_view
+msgid "Basic Details"
+msgstr ""
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.professor_form_view
+msgid "Basic Info"
+msgstr "મૂળભૂત માહિતી"
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.professor_form_view
+#: model_terms:ir.ui.view,arch_db:school_app.professor_wizard_form_view
+msgid "Cancel"
+msgstr "રદ કરો"
+
+#. module: school_app
+#: model:ir.model.fields.selection,name:school_app.selection__school_professor__states__cancel
+msgid "Cancelled"
+msgstr "રદ કર્યું"
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_professor__city
+msgid "City"
+msgstr "શહેર"
+
+#. module: school_app
+#: model:ir.model.fields.selection,name:school_app.selection__school_professor__states__confirm
+#: model:ir.model.fields.selection,name:school_app.selection__school_student__state__confirm
+#: model_terms:ir.ui.view,arch_db:school_app.professor_form_view
+#: model_terms:ir.ui.view,arch_db:school_app.student_form_view
+msgid "Confirm"
+msgstr "પુષ્ટિ કરો"
+
+#. module: school_app
+#: model:ir.model,name:school_app.model_res_partner
+msgid "Contact"
+msgstr "સંપર્ક"
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_professor__country
+msgid "Country"
+msgstr "દેશ"
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_course__desc
+msgid "Course Description"
+msgstr ""
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.course_form_view
+msgid "Course Name"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_course__fee
+msgid "Course fee"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_course__course_name
+msgid "Course name"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_course__website
+msgid "Course website"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_professor_wizard__create_uid
+#: model:ir.model.fields,field_description:school_app.field_school_course__create_uid
+#: model:ir.model.fields,field_description:school_app.field_school_product__create_uid
+#: model:ir.model.fields,field_description:school_app.field_school_professor__create_uid
+#: model:ir.model.fields,field_description:school_app.field_school_student__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_professor_wizard__create_date
+#: model:ir.model.fields,field_description:school_app.field_school_course__create_date
+#: model:ir.model.fields,field_description:school_app.field_school_product__create_date
+#: model:ir.model.fields,field_description:school_app.field_school_professor__create_date
+#: model:ir.model.fields,field_description:school_app.field_school_student__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.professor_form_view
+msgid "DESC"
+msgstr "ડી.એસ.સી."
+
+#. module: school_app
+#: model:ir.actions.act_window,name:school_app.professor_wizard_menu_action_students
+#: model:ir.model.fields,field_description:school_app.field_school_product__desc
+#: model:ir.model.fields,field_description:school_app.field_school_professor__description
+#: model_terms:ir.ui.view,arch_db:school_app.professor_form_view
+#: model_terms:ir.ui.view,arch_db:school_app.report_professsor_app
+msgid "Description"
+msgstr "વર્ણન"
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_professor_wizard__display_name
+#: model:ir.model.fields,field_description:school_app.field_res_partner__display_name
+#: model:ir.model.fields,field_description:school_app.field_school_course__display_name
+#: model:ir.model.fields,field_description:school_app.field_school_product__display_name
+#: model:ir.model.fields,field_description:school_app.field_school_professor__display_name
+#: model:ir.model.fields,field_description:school_app.field_school_student__display_name
+msgid "Display Name"
+msgstr "પ્રદર્શન નામ"
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_res_partner__dob
+#: model:ir.model.fields,field_description:school_app.field_res_users__dob
+#: model:ir.model.fields,field_description:school_app.field_school_student__dob
+msgid "Dob"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model.fields.selection,name:school_app.selection__school_professor__states__draft
+#: model:ir.model.fields.selection,name:school_app.selection__school_student__state__draft
+msgid "Draft"
+msgstr "ડ્રાફ્ટ"
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_professor__email
+#: model:ir.model.fields,field_description:school_app.field_school_student__email
+msgid "Email"
+msgstr "ઇમેઇલ"
+
+#. module: school_app
+#: model:ir.model.fields.selection,name:school_app.selection__school_student__gender__female
+msgid "Female"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_student__gender
+msgid "Gender"
+msgstr ""
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.delievery_slip_inherit_report
+msgid "Goods checked for completeness and function:__________"
+msgstr ""
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.delievery_slip_inherit_report
+msgid "Goods received:<br/>Date:___________ Signature:__________"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_professor_wizard__id
+#: model:ir.model.fields,field_description:school_app.field_res_partner__id
+#: model:ir.model.fields,field_description:school_app.field_school_course__id
+#: model:ir.model.fields,field_description:school_app.field_school_product__id
+#: model:ir.model.fields,field_description:school_app.field_school_professor__id
+#: model:ir.model.fields,field_description:school_app.field_school_student__id
+msgid "ID"
+msgstr "ઓળખ"
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.student_form_view
+msgid "Image"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_professor_wizard____last_update
+#: model:ir.model.fields,field_description:school_app.field_res_partner____last_update
+#: model:ir.model.fields,field_description:school_app.field_school_course____last_update
+#: model:ir.model.fields,field_description:school_app.field_school_product____last_update
+#: model:ir.model.fields,field_description:school_app.field_school_professor____last_update
+#: model:ir.model.fields,field_description:school_app.field_school_student____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_professor_wizard__write_uid
+#: model:ir.model.fields,field_description:school_app.field_school_course__write_uid
+#: model:ir.model.fields,field_description:school_app.field_school_product__write_uid
+#: model:ir.model.fields,field_description:school_app.field_school_professor__write_uid
+#: model:ir.model.fields,field_description:school_app.field_school_student__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_professor_wizard__write_date
+#: model:ir.model.fields,field_description:school_app.field_school_course__write_date
+#: model:ir.model.fields,field_description:school_app.field_school_product__write_date
+#: model:ir.model.fields,field_description:school_app.field_school_professor__write_date
+#: model:ir.model.fields,field_description:school_app.field_school_student__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model.fields.selection,name:school_app.selection__school_student__gender__male
+msgid "Male"
+msgstr ""
+
+#. module: school_app
+#: model:ir.ui.menu,name:school_app.config_nav_menu
+msgid "More"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_professor__name
+msgid "Name"
+msgstr "નામ"
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_product__order_id
+#: model_terms:ir.ui.view,arch_db:school_app.professor_form_view
+msgid "Order"
+msgstr "ઓર્ડર"
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_professor__order_lines
+msgid "Order Lines"
+msgstr "ઓર્ડર લાઇનો"
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_professor__phone
+#: model:ir.model.fields,field_description:school_app.field_school_student__phone
+msgid "Phone"
+msgstr "ફોન"
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_student__photo
+#: model_terms:ir.ui.view,arch_db:school_app.student_form_view
+msgid "Photo"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model.fields,help:school_app.field_school_product__price_unit
+msgid "Price at which the product is sold to customers."
+msgstr ""
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.professor_form_view
+msgid "Print"
+msgstr "છાપો"
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_product__product_id
+#: model_terms:ir.ui.view,arch_db:school_app.report_professsor_app
+msgid "Product"
+msgstr "ઉત્પાદન"
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_product__product_temp_id
+msgid "Product Template"
+msgstr ""
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.professor_form_view
+msgid "Products"
+msgstr "ઉત્પાદનો"
+
+#. module: school_app
+#: model:ir.actions.report,name:school_app.action_report_professor
+#: model:ir.model.fields,field_description:school_app.field_res_partner__professor
+#: model:ir.model.fields,field_description:school_app.field_res_users__professor
+msgid "Professor"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_professor_wizard__professor_desc
+msgid "Professor Desc"
+msgstr "પ્રોફેસર ડેસ્ક"
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.professor_wizard_form_view
+msgid "Professor Description"
+msgstr "પ્રોફેસર વર્ણન"
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_product__product_uom_qty
+#: model_terms:ir.ui.view,arch_db:school_app.report_professsor_app
+msgid "Quantity"
+msgstr "જથ્થો"
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.professor_form_view
+msgid "Reset"
+msgstr "ફરીથી સેટ કરો"
+
+#. module: school_app
+#: model:ir.model.fields.selection,name:school_app.selection__school_professor__states__order
+msgid "Sales Order"
+msgstr "વેચાણ ઓર્ડર"
+
+#. module: school_app
+#: model:ir.actions.act_window,name:school_app.action_course_data
+#: model:ir.actions.act_window,name:school_app.action_professor_data
+#: model:ir.actions.act_window,name:school_app.action_school_data
+msgid "School_app"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_product__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_professor__state
+#: model:ir.model.fields,field_description:school_app.field_school_student__state
+msgid "State"
+msgstr "રાજ્ય"
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_professor__states
+msgid "Status"
+msgstr "સ્થિતિ"
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_professor__street
+msgid "Street"
+msgstr "શેરી"
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_professor__street2
+msgid "Street2"
+msgstr "શેરી 2"
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_res_partner__student_id
+#: model:ir.model.fields,field_description:school_app.field_res_users__student_id
+#: model:ir.model.fields,field_description:school_app.field_school_course__student_id
+msgid "Student"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_student__name
+msgid "Student name"
+msgstr ""
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.professor_wizard_form_view
+msgid "Submit"
+msgstr "સબમિટ કરો"
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.delievery_slip_inherit_report
+msgid "Thank you for your order"
+msgstr ""
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.report_professsor_app
+msgid "This object's name is"
+msgstr ""
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.report_professsor_app
+msgid "Total Price"
+msgstr "કુલ કિંમત"
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_product__subtotal_price
+msgid "Total_price"
+msgstr "કુલ કિંમત"
+
+#. module: school_app
+#: model:ir.model.fields,field_description:school_app.field_school_product__price_unit
+#: model_terms:ir.ui.view,arch_db:school_app.report_professsor_app
+msgid "Unit Price"
+msgstr "એકમ ભાવ"
+
+#. module: school_app
+#: model:ir.model.constraint,message:school_app.constraint_school_professor_age_uniq
+msgid "You can not have two users with the same age !"
+msgstr ""
+
+#. module: school_app
+#: code:addons/school_app/models/student.py:0
+#, python-format
+msgid "Your name should atleast 6 characters"
+msgstr ""
+
+#. module: school_app
+#: model_terms:ir.ui.view,arch_db:school_app.sale_order_report_inherit
+msgid "abc"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model.constraint,message:school_app.constraint_school_professor_check_age
+msgid "age should be between 20 and 35"
+msgstr ""
+
+#. module: school_app
+#: model:ir.ui.menu,name:school_app.course_nav_menu
+msgid "course"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model,name:school_app.model_school_course
+msgid "course desc"
+msgstr ""
+
+#. module: school_app
+#: model:ir.ui.menu,name:school_app.professor_nav_menu
+msgid "professor"
+msgstr ""
+
+#. module: school_app
+#: model:ir.ui.menu,name:school_app.school_id_menu
+#: model:ir.ui.menu,name:school_app.school_nav_menu
+msgid "school app"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model,name:school_app.model_school_product
+msgid "school.product"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model,name:school_app.model_school_professor
+msgid "school.professor"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model,name:school_app.model_school_student
+msgid "school_student"
+msgstr ""
+
+#. module: school_app
+#: model:ir.model,name:school_app.model_professor_wizard
+msgid "this is professor wizard model"
+msgstr ""

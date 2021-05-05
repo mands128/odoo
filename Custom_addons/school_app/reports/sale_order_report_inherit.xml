@@ -1,0 +1,10 @@
+<odoo>
+	<template id="sale_order_report_inherit" inherit_id="sale.report_saleorder_document">
+		<xpath expr="//th[@name='th_quantity']" position="before">
+              <th name="th_abc" class="text-right">abc</th>  
+        </xpath>
+		<xpath expr="//td[@name='td_quantity']" position="before">
+              <td name="td_abc" class="text-right"><i>abc</i></td>  
+        </xpath>
+	</template>
+</odoo>

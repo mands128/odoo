@@ -1,0 +1,129 @@
+<odoo>
+    <data>
+        <!-- <record model="ir.actions.act_window" id="preview_professor_order">
+            <field name="name">Print</field>
+            <field name="res_model">school.professor</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+        </record>
+ -->
+
+
+        <record id="professor_tree_view" model="ir.ui.view">
+            <field name="name">professor.tree.view</field>
+            <field name="model">school.professor</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="email"/>
+                    <field name="street"/>
+                    <field name="street2"/>
+                    <field name="city"/>
+                    <field name="state"/>
+                    <field name="country"/>
+                    <field name="phone"/>
+                    <field name="age"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="professor_form_view" model="ir.ui.view">
+            <field name="name">professor.form.view</field>
+            <field name="model">school.professor</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button type="object" string="Reset" name="act_draft" class="btn-primary" attrs="{'invisible':[('states','in',['draft','confirm','order'])]}"/>
+                        <button type="object" string="Confirm" name="act_confirm" class="btn-primary" attrs="{'invisible':[('states','in',['confirm','cancel','order'])]}"/>
+                        <button type="object" string="Order" name="act_order" class="btn-primary" attrs="{'invisible':[('states','in',['draft','cancel','order'])]}"/>
+                        <button type="object" string="Cancel" name="act_cancel" class="btn-primary" attrs="{'invisible':[('states','not in',['draft','confirm','order'])]}"/>
+                        <button type="object" string="Print" name="print_report" class="btn-primary" attrs="{'invisible':[('states','!=','order')]}"/>
+                        <button type="object" string="DESC" name="act_desc" class="btn-primary"/>
+                        <!-- <button type="object" string="Fill" name="create_professor" class="btn-primary"/> -->
+                        <field name="states" widget="statusbar" statusbar_visible="draft,confirm,order"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="preview_professor_order"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-globe icon">
+                                <div class="o_field_widget o_stat_info">
+                                    <span class="o_stat_text">Contacts</span>
+                                </div>
+                            </button>
+                    
+                                <button name="%(school_app.action_report_professor)d"
+                                type="action"
+                                class="oe_stat_button"
+                                icon="fa-usd icon">
+                                <div class="o_field_widget o_stat_info">
+                                    <span class="o_stat_text">Print</span>
+                                </div>
+                            </button>
+                        </div>
+                        
+                        <group>
+                            <group string="Basic Info">
+                                <field name="name"/>
+                                <field name="email" readonly="False"/>
+                                <field name="street" readonly="False"/>
+                                <field name="street2" readonly="False"/>
+                                <field name="city" readonly="False"/>
+                                <field name="state" readonly="False"/>
+                                <field name="country" readonly="False"/>
+                                <field name="phone" readonly="False"/>
+                                <field name="age"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Products">
+                                <field name="order_lines" widget="section_and_note_one2many">
+                                    <tree editable="bottom">
+                                        <control>
+                                            <create string="Add a product"/>
+                                        </control>
+                                        <field name="sequence" widget="handle"/>
+                                        <field name="product_id"/>
+                                        <field name="desc"/>
+                                        <field name="product_uom_qty"/>
+                                        <field name="price_unit"/>
+                                        <field name="subtotal_price"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Description">
+                                <group>
+                                    <group>
+                                        <field name ="description" readonly="False"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="action_professor_data">
+            <field name="name">School_app</field>
+            <field name="res_model">school.professor</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="professor_nav_menu" parent="config_nav_menu" name="professor" action="action_professor_data"/>
+
+
+
+        <record id="professor_wizard_menu_action_students" model="ir.actions.act_window">
+            <field name="name">Description</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">professor.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="view_id" ref="school_app.professor_wizard_form_view"></field>
+            <field name="binding_model_id" ref="model_school_professor"></field>
+            <field name="binding_view_types">form</field>
+        </record>
+    </data>
+</odoo>
