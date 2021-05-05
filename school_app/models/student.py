@@ -22,6 +22,7 @@ class Student(models.Model):
     photo = fields.Image(max_width=30, max_height=50)
     address = fields.Text()
     state = fields.Selection([('draft', 'Draft'), ('confirm', 'Confirm')])
+    course_id=fields.Many2many('school_course',string="Course")
     # course_id = fields.One2many('school_course', 'student_id')
     # course_name = fields.Many2one('school_course')
     # desc = fields.Text(related='course_name.desc')

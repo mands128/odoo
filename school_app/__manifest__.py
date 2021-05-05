@@ -24,20 +24,22 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
-        'views/templates.xml',
+        'security/security_manager.xml',
+        'security/ir.model.access.csv',
+        # 'views/views.xml',
+        # 'views/templates.xml',
         'views/student.xml',
         'views/course.xml',
+        'reports/reports.xml',
+        'reports/professor_template.xml',
+        'wizard/professor_wizard_view.xml',
         'views/professor.xml',
+        'reports/delievery_slip_inherit_report.xml',
+        'reports/sale_order_report_inherit.xml',
+        'views/student_information_view.xml',
         'views/update_contacts_views.xml',
         'views/replace_class_values.xml',
-	   'reports/professor_template.xml',
-        'reports/reports.xml',
-        'reports/sale_order_report_inherit.xml',
-        'reports/delievery_slip_inherit_report.xml',
-        'wizard/professor_wizard_view.xml'
-        
+        'views/res_config_settings_views.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

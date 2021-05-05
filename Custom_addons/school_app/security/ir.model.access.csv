@@ -1,5 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-education_manager,education_manager_name,model_student_information,group_educational_manager,1,1,1,0
-education_qualification,education_qualification_name,model_education_qualification,group_educational_manager,1,1,1,0
-professor,professor_name,model_school_professor,group_professor,1,0,0,0
-product,product_name,model_school_product,group_professor,1,0,0,0
