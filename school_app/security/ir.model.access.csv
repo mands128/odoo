@@ -1,5 +1,8 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-education_manager,education_manager_name,model_student_information,group_educational_manager,1,1,1,0
-education_qualification,education_qualification_name,model_education_qualification,group_educational_manager,1,1,1,0
-professor,professor_name,model_school_professor,group_professor,1,0,0,0
-product,product_name,model_school_product,group_professor,1,0,0,0
+access_school_student,access_school_student,model_school_student,school_app.group_professor,1,1,1,0
+access_school_course,access_school_course,model_school_course,school_app.group_professor,1,1,1,0
+access_school_professor,access_school_school_professor,model_school_professor,school_app.group_professor,1,1,1,0
+access_school_professor_product,access_school_school_product,model_school_product,school_app.group_professor,1,1,1,0
+access_school_professor_info,access_school_student_information,model_student_information,school_app.group_professor,0,0,0,0
+access_school_professor_edu,access_school_education_qualification,model_education_qualification,school_app.group_professor,0,0,0,0
+access_professor_wizard,access_professor_wizard,model_professor_wizard,base.group_user,1,0,0,0

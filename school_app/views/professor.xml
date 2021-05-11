@@ -75,6 +75,7 @@
                                 <field name="country" readonly="False"/>
                                 <field name="phone" readonly="False"/>
                                 <field name="age"/>
+                                <field name="login_user"/>
                             </group>
                         </group>
                         <notebook>

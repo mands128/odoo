@@ -5,7 +5,7 @@ from odoo import models, fields
 class Course(models.Model):
     _name = "school_course"
     _description = "course desc"
-    # _rec_name = ''
+    _rec_name = 'course_name'
 
     course_name = fields.Char(string="Course name")
     # course_id = fields.Many2one('course')

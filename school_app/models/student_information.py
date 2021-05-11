@@ -14,6 +14,8 @@ class StudentInformation(models.Model):
     state = fields.Char(string="state")
     country=fields.Char(string="country")
     education_qualification = fields.One2many("education.qualification","student_id")
+    course_ids=fields.Many2many('school_course','student_course_relation_table','students_id','courses_id',"Course")
+    login_user=fields.Many2one("res.users",default=lambda self:self.env.user)
 
     
     # current_year=fields.Integer(string="Current Year", default=datetime.now().year)

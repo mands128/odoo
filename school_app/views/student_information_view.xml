@@ -34,6 +34,8 @@
                                 <field name="mobile_no"/>
                                 <field name="state"/>
                                 <field name="country"/>
+                                <field name="course_ids" widget="many2many_tags"/>
+                                <field name="login_user"/>
                                 <!-- <field name="passout"/> -->
                             </group>
                         </group>

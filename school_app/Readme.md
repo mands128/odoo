@@ -1,1 +1,0 @@
-just hgetting staarted git

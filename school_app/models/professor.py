@@ -34,7 +34,7 @@ class Professor(models.Model):
         ('cancel', 'Cancelled'),
         ], string='Status', readonly=True, copy=False, index=True, tracking=3, default='draft')
     # professor = fields.Boolean(string="professor")
-
+    login_user=fields.Many2one("res.users",default=lambda self:self.env.user)
     _sql_constraints = [
         ('age_uniq', 'UNIQUE (age)', 'You can not have two users with the same age !'),
         ('check_age', 'CHECK(age > 20 and age < 35)', 'age should be between 20 and 35')
