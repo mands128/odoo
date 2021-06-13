@@ -40,8 +40,18 @@
                         <button type="object" string="Cancel" name="act_cancel" class="btn-primary" attrs="{'invisible':[('states','not in',['draft','confirm','order'])]}"/>
                         <button type="object" string="Print" name="print_report" class="btn-primary" attrs="{'invisible':[('states','!=','order')]}"/>
                         <button type="object" string="DESC" name="act_desc" class="btn-primary"/>
+                        <button type="object" string="send by email" name="action_send_email" class="btn-primary"/>
+
                         <!-- <button type="object" string="Fill" name="create_professor" class="btn-primary"/> -->
                         <field name="states" widget="statusbar" statusbar_visible="draft,confirm,order"/>
+
+                        <!-- button for x2many filling -->
+
+
+                
+
+
+
                     </header>
                     <sheet>
                         <div class="oe_button_box" name="button_box">
@@ -77,6 +87,7 @@
                                 <field name="age"/>
                                 <field name="login_user"/>
                             </group>
+
                         </group>
                         <notebook>
                             <page string="Products">
@@ -107,10 +118,37 @@
                 </form>
             </field>
         </record>
+
+
+
+<!-- kanban view -->
+
+        <record id="school_professor_kanban" model="ir.ui.view">
+            <field name="name">school.professor.kanban</field>
+            <field name="model">school.professor</field>
+            <field name="arch" type="xml">
+                <kanban class="o_kanban_mobile">
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_global_click">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <strong><field name="name"/></strong>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+
         <record model="ir.actions.act_window" id="action_professor_data">
             <field name="name">School_app</field>
             <field name="res_model">school.professor</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,kanban,form</field>
         </record>
         <menuitem id="professor_nav_menu" parent="config_nav_menu" name="professor" action="action_professor_data"/>
 

@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','product','contacts'],
+    'depends': ['base','product','contacts','calendar'],
 
     # always loaded
     'data': [
@@ -38,8 +38,12 @@
         'reports/sale_order_report_inherit.xml',
         'views/student_information_view.xml',
         'views/update_contacts_views.xml',
+        'views/update_calander_views.xml',
         'views/replace_class_values.xml',
-        'views/res_config_settings_views.xml'
+        'views/res_config_settings_views.xml',
+        'data/scheduler.xml',
+        'data/mail_template.xml',
+
     ],
     # only loaded in demonstration mode
     'demo': [

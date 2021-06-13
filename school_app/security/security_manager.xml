@@ -1,29 +1,29 @@
-
 <odoo>
 	<data>
 		<record id="education_manager_label" model="ir.module.category">
         	<field name="name">Educational Manager</field>
         	<field name="sequence">1</field>
-    	</record>
+    </record>
 
 		<record id="education_manager_user_category" model="ir.module.category">
-              <field name="name">User Type</field>
-              <field name="sequence">1</field>
-               <field name="parent_id" ref="education_manager_label"/>
-    	</record>
+        <field name="name">User Type</field>
+        <field name="sequence">1</field>
+        <field name="parent_id" ref="education_manager_label"/>
+    </record>
+
 
 		<record id="group_professor" model="res.groups">
       <field name="name">Professor</field>
-        <field name="category_id" ref="education_manager_user_category"/>
-        <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+      <field name="category_id" ref="education_manager_user_category"/>
+      <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
     </record>
 
 
     <record id="group_educational_manager" model="res.groups">
-        <field name="name">Educational manager</field>
+      <field name="name">Educational manager</field>
         	<!-- <field name="comment">Show line subtotals without taxes (B2B)</field> -->
-        <field name="category_id" ref="education_manager_user_category"/>
-        <field name="implied_ids" eval="[(4, ref('group_professor'))]"/>
+      <field name="category_id" ref="education_manager_user_category"/>
+      <field name="implied_ids" eval="[(4, ref('group_professor'))]"/>
     </record>
     	
 <!-- 
@@ -36,26 +36,26 @@
 		
 
     	<record model="ir.rule" id="rules_for_studentt">
-        	<field name="name">Professor can see only his  Record</field>
-        	<field name="model_id" ref="model_school_professor"/>
-        	<field name="groups" eval="[(4, ref('school_app.group_professor'))]"/>
-          <field name="domain_force">[('create_uid', '=', user.id)]</field>
-          <field name="perm_read" eval="True"/>
-            <field name="perm_write" eval="True"/>
-            <field name="perm_create" eval="True"/>
-            <field name="perm_unlink" eval="False"/>
+        <field name="name">Professor can see only his  Record</field>
+        <field name="model_id" ref="model_school_professor"/>
+        <field name="groups" eval="[(4, ref('school_app.group_professor'))]"/>
+        <field name="domain_force">[('create_uid', '=', user.id)]</field>
+        <field name="perm_read" eval  ="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="False"/>
    		</record>
 
  
    		<record model="ir.rule" id="rules_for_professor">
-        	<field name="name">Manager can see all Record</field>
-        	<field name="model_id" ref="model_school_professor"/>
-        	<field name="groups" eval="[(4, ref('school_app.group_educational_manager'))]"/>
-          <field name="domain_force">[(1,'=',1)]</field>
-          <field name="perm_read" eval="True"/>
-            <field name="perm_write" eval="True"/>
-            <field name="perm_create" eval="True"/>
-            <field name="perm_unlink" eval="True"/>
+        <field name="name">Manager can see all Record</field>
+        <field name="model_id" ref="model_school_professor"/>
+        <field name="groups" eval="[(4, ref('school_app.group_educational_manager'))]"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="True"/>
+        <field name="perm_create" eval="True"/>
+        <field name="perm_unlink" eval="True"/>
    		</record>
 	</data>
 </odoo>

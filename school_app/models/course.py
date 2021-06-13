@@ -13,4 +13,6 @@ class Course(models.Model):
     fee = fields.Integer(string="Course fee")
     website = fields.Char(string="Course website")
     student_id = fields.Many2one('school_student')
+    color=fields.Integer()
+    
     

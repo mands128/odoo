@@ -25,7 +25,11 @@
                         <button type="object" string="Approve" name="act_approve" class="btn-primary" groups="school_app.group_educational_manager"/>
                         <button type="object" string="Cancel" name="act_cancel" class="btn-primary"/>
                         <field name="states" widget="statusbar" statusbar_visible="draft,approved,cancel"/>
-                    </header>
+                        <button name="x2manyfilling" type="object" string="C/D6" class="btn-primary"/>
+                        <button name="x2manyfilling1" type="object" string="C/D5" class="btn-primary"/>
+                        <button name="x2manyfilling2" type="object" string="C/D4" class="btn-primary"/>
+                  
+                  </header>
                     <sheet>
                         <group>
                             <group string="Basic Details">
@@ -34,7 +38,7 @@
                                 <field name="mobile_no"/>
                                 <field name="state"/>
                                 <field name="country"/>
-                                <field name="course_ids" widget="many2many_tags"/>
+                                <field name="course_ids" widget="many2many_tags" options="{'color_field': 'color'}"/>
                                 <field name="login_user"/>
                                 <!-- <field name="passout"/> -->
                             </group>

@@ -39,7 +39,18 @@ class Professor(models.Model):
         ('age_uniq', 'UNIQUE (age)', 'You can not have two users with the same age !'),
         ('check_age', 'CHECK(age > 20 and age < 35)', 'age should be between 20 and 35')
     ]
+    color=fields.Integer()
+    photo = fields.Image(max_width=30, max_height=50,related='name.image_1920')
+    user_id = fields.Many2one('res.users', string="PRO")
 
+
+
+    def action_send_email(self):
+       mail_template = self.env.ref('school_app.professor_card_email_template')
+       mail_template.send_mail(self.id, force_send=True)
+
+    def hello_world(self):
+        print("hello hello_world")
     # @api.constrains('age')
     # def check_age(self):
     #     if self.age <= 20 or self.age >= 35:
@@ -120,6 +131,7 @@ class Professor(models.Model):
         #         'website':"www.youtube.com"
         #     }
         #     partner_write.write(vals)
+
 
         # copy
         # professor_copy = self.env['res.partner'].browse(35)
@@ -250,3 +262,14 @@ class Professor(models.Model):
         professor = fields.Boolean(string="Professor")
         dob = fields.Date()
         student_id = fields.Many2one(readonly=True)
+
+
+    class CalendarInherit(models.Model):
+        _inherit = "calendar.event"
+
+        loginuser = fields.Many2one('res.users',string="login_user")
+
+
+
+
+

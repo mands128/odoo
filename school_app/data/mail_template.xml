@@ -1,0 +1,31 @@
+<odoo>
+
+    <!--Creating Email Template in Odoo-->
+   
+    <data noupdate="1">
+        <record id="professor_card_email_template" model="mail.template">
+            <field name="name">Professor Card: Send by email</field>
+            <field name="model_id" ref="school_app.model_school_professor"/>
+            <field name="email_from">${object.user_id.email_formatted |safe}</field>
+            <field name="email_to">${object.email}</field>
+            <field name="subject">Professor Card (Ref ${object.name})</field>
+            <field name="body_html" type="html">
+                <div style="margin: 0px; padding: 0px;">
+                    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                        Dear ${object.name}
+                        <br /><br />
+                        Here is your professor card with reference ${object.name}
+                        <br /><br />
+                        Age : ${object.age}
+                        Contact Number : ${object.phone}
+                        <br /><br />
+                        If you have queries feel free to ask.
+                    </p>
+                </div>
+            </field>
+            <field name="report_template" ref="action_report_professor"/>
+            <field name="report_name">Professor Card_${(object.name)}</field>
+        </record>
+    </data>
+
+</odoo>

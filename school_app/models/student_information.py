@@ -44,6 +44,27 @@ class StudentInformation(models.Model):
     		rec.states='approved'
 
 
+    def x2manyfilling(self):
+        print("\n\n\n\nkem cho\n\n\n\n")
+        for rec in self:
+            dt = self.env["school_course"].browse([3])
+            rec.course_ids = [(6, 0, [dts.id for dts in dt])]
+            # rec.skill_list = [(5, 0, 0)] 
+
+    def x2manyfilling1(self):
+        print("\n\n\n\nkem cho\n\n\n\n")
+        for rec in self:
+            dt = self.env["school_course"].browse([3])
+            rec.course_ids = [(5, 0, 0)]
+
+    def x2manyfilling2(self):
+        print("\n\n\n\nkem cho\n\n\n\n")
+        for rec in self:
+            dt = self.env["school_course"].browse([3])
+            for dta in dt:
+                rec.course_ids = [(4,dta.id,0)]
+            print(dt.course_name)      
+
 
 class EducationQualification(models.Model):
     _name = "education.qualification"
